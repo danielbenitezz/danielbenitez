@@ -1,0 +1,386 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Portfolio Daniel Benítez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: portada con "PORTFOLIO" gigante detrás del retrato, luego secciones editoriales
+   sobre fondo hueso con verde bosque como tinta y salvia como acento. Un solo look, claro. */
+:root{
+  --ivory:#DAD7CD; --ivory-2:#E6E3DA; --sage:#A3B18A; --sage-light:#C3CCAE;
+  --leaf:#588157; --pine:#3A5A40; --forest:#344E41;
+  --line:rgba(52,78,65,.35);
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+  --gutter:clamp(16px,5vw,72px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ivory);color:var(--forest);font:400 18px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p,ul,figure,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1440px;margin-inline:auto;padding-inline:var(--gutter)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ivory);border-bottom:1.5px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px}
+.brand{font:800 20px/1 var(--display);letter-spacing:-.02em;text-decoration:none}
+.top nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.top nav a{text-decoration:none;padding:10px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:var(--forest)}
+.top nav a.cta{padding:10px 20px;border:2px solid var(--forest);border-radius:999px}
+.top nav a.cta:hover{background:var(--forest);color:var(--ivory)}
+@media (max-width:720px){.top nav a:not(.cta){display:none}}
+
+/* hero */
+.hero{padding-block:28px 48px}
+.hero-meta{display:flex;justify-content:space-between;gap:16px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:8px}
+.stage{container-type:inline-size;position:relative;aspect-ratio:16/9;overflow:hidden}
+.circle{position:absolute;left:32.64%;top:18.52%;width:34.72%;aspect-ratio:1;border-radius:50%;background:var(--sage)}
+.stage h1{position:absolute;inset-inline:0;top:14.57%;text-align:center;font-family:var(--display);font-weight:800;font-size:18.19cqw;line-height:1;letter-spacing:-.035em;white-space:nowrap}
+.me{position:absolute;left:31.25%;top:11.11%;width:37.5%;height:88.89%;object-fit:contain;object-position:bottom;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 84%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 84%,transparent 100%)}
+@media (max-width:700px){
+  .tagline{text-align:left}
+  .stage{aspect-ratio:4/5}
+  .circle{left:10%;top:24%;width:80%}
+  .stage h1{top:5%;font-size:20.2cqw}
+  .me{left:6%;top:auto;bottom:0;width:88%;height:auto;aspect-ratio:3/4}
+}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px 32px;margin-top:20px}
+.name{font:800 clamp(28px,3.1vw,44px)/1 var(--display);letter-spacing:-.02em}
+.where{color:var(--pine);margin-top:6px;font-size:16px}
+.tagline{color:var(--pine);font-size:16px;text-align:right}
+
+/* sections */
+.block{border-top:1.5px solid var(--line);padding-block:clamp(56px,8vw,112px)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--pine);margin-bottom:20px}
+.big{font:800 clamp(44px,8.3vw,120px)/.98 var(--display);letter-spacing:-.035em;text-wrap:balance}
+.lead{font-size:clamp(19px,2vw,25px);line-height:1.45;color:var(--pine);max-width:34em;text-wrap:pretty}
+.chip{display:inline-block;padding:12px 24px;border:2px solid var(--forest);border-radius:999px;font-size:18px;font-weight:500}
+
+/* sobre mí */
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:clamp(32px,6vw,96px);align-items:center}
+.about .lead{margin:32px 0}
+.portrait{border-radius:32px;overflow:hidden;background:var(--sage);aspect-ratio:440/580;width:100%;max-width:440px;justify-self:end}
+.portrait img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.about{grid-template-columns:minmax(0,1fr)}.portrait{justify-self:start}}
+
+/* qué hago */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:32px 24px;margin-top:56px}
+.card{border-top:2px solid var(--forest);padding-top:28px;display:flex;flex-direction:column;gap:16px}
+.card svg{width:44px;height:44px;color:var(--leaf)}
+.card h3{font:800 clamp(24px,2.2vw,30px)/1.05 var(--display);letter-spacing:-.02em}
+.card p{color:var(--pine);font-size:18px}
+
+/* casos */
+.cases-head{margin-bottom:clamp(40px,6vw,72px)}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.case + .case{margin-top:clamp(72px,10vw,140px)}
+.pilltag{display:inline-block;padding:9px 20px;background:var(--forest);color:var(--ivory);border-radius:999px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.case-title{font:800 clamp(56px,9vw,128px)/.95 var(--display);letter-spacing:-.04em;margin:24px 0}
+.desc{font-size:clamp(19px,2vw,23px);line-height:1.45;color:var(--pine)}
+.role-title{font:800 30px/1 var(--display);letter-spacing:-.02em;margin:32px 0 18px}
+.roles{display:flex;flex-direction:column;gap:14px;font-size:19px;line-height:1.4}
+.roles li{display:grid;grid-template-columns:9px minmax(0,1fr);gap:14px}
+.roles li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--leaf);margin-top:.5em}
+.links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-weight:500}
+.links a{text-underline-offset:4px;padding-block:6px}
+.phones{display:flex;gap:clamp(12px,2.2vw,28px);align-items:flex-start;justify-content:center}
+.phone{flex:0 1 300px;min-width:0;border:8px solid var(--forest);border-radius:38px;overflow:hidden;background:var(--forest)}
+.phone img{width:100%;height:auto}
+.phone:nth-child(2){margin-top:60px}
+.phone.photo{border-radius:26px}
+@media (max-width:560px){.phone{border-width:5px;border-radius:24px}.phone.photo{border-radius:18px}.phone:nth-child(2){margin-top:36px}}
+.reels{grid-column:1/-1;margin-top:8px}
+.reels .eyebrow{margin-bottom:16px}
+.reel-row{display:flex;flex-wrap:wrap;gap:28px}
+.reel{width:min(100%,260px)}
+.vframe{border:8px solid var(--forest);border-radius:38px;overflow:hidden;background:var(--forest);aspect-ratio:9/16}
+.vframe video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.reel figcaption{margin-top:12px;font-size:16px}
+@media (max-width:560px){.vframe{border-width:5px;border-radius:24px}}
+@media (min-width:901px){.case.flip .visuals{order:-1}}
+@media (max-width:900px){.case{grid-template-columns:minmax(0,1fr)}}
+
+/* fotografía */
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;margin-top:48px}
+.frame{aspect-ratio:416/440;border-radius:24px;overflow:hidden;background:var(--sage)}
+.frame img{width:100%;height:100%;object-fit:cover}
+figcaption{margin-top:14px;font-size:17px;font-weight:500}
+
+/* herramientas */
+.tools{margin-top:48px;border-bottom:1.5px solid var(--line)}
+.tool-row{display:grid;grid-template-columns:190px minmax(0,1fr);gap:32px;align-items:center;padding:20px 0;border-top:1.5px solid var(--line)}
+.tool-row h3{font:500 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--pine)}
+.pills{display:flex;flex-wrap:wrap;gap:12px}
+.pill{padding:11px 26px;border:2px solid var(--forest);border-radius:999px;background:var(--ivory-2);font-size:clamp(16px,1.5vw,21px);font-weight:500}
+@media (max-width:640px){.tool-row{grid-template-columns:minmax(0,1fr);gap:12px}}
+
+/* contacto */
+.contact{background:var(--forest);color:var(--ivory);padding-block:clamp(64px,9vw,128px) 40px}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,96px);align-items:start}
+.contact .big{color:var(--ivory)}
+.contact .lead{color:var(--sage-light);margin-top:32px}
+.contact-card{background:var(--ivory);color:var(--forest);border-radius:32px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:26px}
+.contact-card h3{font:800 32px/1 var(--display);letter-spacing:-.02em}
+.contact-card dt{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--pine);margin-bottom:4px}
+.contact-card dd{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:20px;font-weight:500}
+.val{overflow-wrap:anywhere}
+.copy{font:500 14px/1 var(--body);min-height:44px;padding:0 18px;border:2px solid var(--forest);border-radius:999px;background:transparent;color:var(--forest);cursor:pointer}
+.copy:hover{background:var(--forest);color:var(--ivory)}
+.foot{margin-top:clamp(48px,7vw,96px);color:var(--sage-light);font-size:15px}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio">Daniel Benítez</a>
+    <nav aria-label="Secciones">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#casos">Casos</a>
+      <a href="#fotografia">Fotografía</a>
+      <a href="#herramientas">Herramientas</a>
+      <a class="cta" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero wrap">
+    <div class="hero-meta"><span>Marketing digital &amp; E-commerce</span><span>2026</span></div>
+    <div class="stage">
+      <div class="circle" aria-hidden="true"></div>
+      <h1>PORTFOLIO<span class="sr"> de Daniel Benítez</span></h1>
+      <img class="me" src="img/cover.webp" width="1000" height="1333" alt="Retrato de Daniel Benítez, sonriendo, con anteojos y camisa negra">
+    </div>
+    <div class="hero-foot">
+      <div><p class="name">Daniel Benítez</p><p class="where">Buenos Aires, Argentina</p></div>
+      <p class="tagline">Tiendas online, contenido<br>y campañas en Meta</p>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="block">
+    <div class="wrap about">
+      <div>
+        <h2 class="big">Hola,<br>soy Daniel.</h2>
+        <p class="lead">Hago marketing digital y fotografía de producto. Armo tiendas online, produzco el contenido y saco las fotos. Además analizo y optimizo campañas en Meta Ads según los resultados.</p>
+        <span class="chip">Buenos Aires, Argentina</span>
+      </div>
+      <div class="portrait"><img src="img/sobre-mi.jpg" width="880" height="1159" alt="Daniel Benítez de perfil, con gorra y anteojos color ámbar, sonriendo"></div>
+    </div>
+  </section>
+
+  <section id="que-hago" class="block">
+    <div class="wrap">
+      <h2 class="big">Qué hago</h2>
+      <p class="lead" style="margin-top:24px">De la tienda a la foto: lo que necesita una marca para vender producto online.</p>
+      <div class="cards">
+        <article class="card">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h28l-2.5 22h-23z"/><path d="M15 14v-2a7 7 0 0 1 14 0v2"/></svg>
+          <h3>Tiendas online</h3>
+          <p>Estructura de productos, promociones y experiencia de compra en Shopify.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="5" width="26" height="34" rx="6"/><path d="M19 17l8 5-8 5z"/></svg>
+          <h3>Contenido y redes</h3>
+          <p>Reels, historias y piezas gráficas pensadas para mostrar y vender el producto.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="22" r="16"/><circle cx="22" cy="22" r="9"/><circle cx="22" cy="22" r="2.5"/></svg>
+          <h3>Campañas en Meta</h3>
+          <p>Armado, análisis y optimización de campañas, con Meta Pixel integrado a Shopify y eventos verificados.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15h8l3-5h10l3 5h8v22H6z"/><circle cx="22" cy="25" r="6.5"/></svg>
+          <h3>Fotografía de producto</h3>
+          <p>Fotos para la tienda y las redes, hechas por la misma persona que arma la campaña.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="casos" class="block">
+    <div class="wrap">
+      <div class="cases-head">
+        <h2 class="big">Casos</h2>
+        <p class="lead" style="margin-top:24px">Tres marcas, tres rubros.</p>
+      </div>
+
+      <article class="case">
+        <div>
+          <span class="pilltag">Proyecto propio · Jun 2026 – hoy</span>
+          <h3 class="case-title">FlowFit</h3>
+          <p class="desc">Marca de accesorios de entrenamiento funcional. Tienda en Shopify, contenido para redes y campañas en Meta.</p>
+          <h4 class="role-title">Mi rol</h4>
+          <ul class="roles">
+            <li>Armé y administro la tienda: estructura de productos, promociones y experiencia de compra.</li>
+            <li>Planifico y produzco Reels, historias y piezas gráficas orientadas a producto.</li>
+            <li>Configuré campañas en Meta Ads e integré Meta Pixel con Shopify, verificando los eventos del embudo.</li>
+            <li>Diseñé el Plan FlowFit, una guía de 30 días de bonus para quienes compran el combo tabla y bandas.</li>
+          </ul>
+          <p class="links"><a href="https://tiendaflowtit.com">Ver tienda ↗</a><a href="https://www.instagram.com/flowfit.argen/">Instagram ↗</a></p>
+        </div>
+        <div class="visuals phones">
+          <figure class="phone"><img src="img/flowfit-tienda.jpg" width="900" height="1521" alt="Página de inicio de la tienda online de FlowFit"></figure>
+          <figure class="phone"><img src="img/flowfit-ig.jpg" width="900" height="1586" alt="Perfil de Instagram de FlowFit con piezas de contenido"></figure>
+        </div>
+        <div class="reels">
+          <p class="eyebrow">En video</p>
+          <div class="reel-row">
+            <figure class="reel">
+              <div class="vframe"><video src="vid/flowfit-reel.mp4" poster="img/poster-flowfit.jpg" controls muted loop playsinline preload="metadata" data-loop aria-label="Reel de FlowFit: entrenamiento con la tabla y las bandas en una plaza"></video></div>
+              <figcaption>Reel · FlowFit</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="case flip">
+        <div>
+          <span class="pilltag">Colaboración</span>
+          <h3 class="case-title">Taller de<br>Objetos</h3>
+          <p class="desc">Emprendimiento de impresión 3D personalizada: charms, llaveros y objetos, con venta minorista y mayorista.</p>
+          <h4 class="role-title">Mi rol</h4>
+          <ul class="roles">
+            <li>Me encargo de la tienda online, con un catálogo de 30 productos.</li>
+            <li>Manejo las redes sociales: publicaciones, Reels e historias destacadas.</li>
+            <li>Saco las fotos de producto que se publican en las redes.</li>
+          </ul>
+          <p class="links"><a href="https://tallerdeobjetos3d.com.ar">Ver tienda ↗</a><a href="https://www.instagram.com/tallerdeobjetos.3d/">Instagram ↗</a></p>
+        </div>
+        <div class="visuals phones">
+          <figure class="phone"><img src="img/taller-tienda.jpg" width="900" height="1690" alt="Tienda online de Taller de Objetos con su catálogo"></figure>
+          <figure class="phone"><img src="img/taller-ig.jpg" width="900" height="1560" alt="Perfil de Instagram de Taller de Objetos con charms y llaveros"></figure>
+        </div>
+      </article>
+
+      <article class="case">
+        <div>
+          <span class="pilltag">Colaboración · Proyecto finalizado</span>
+          <h3 class="case-title">Florería<br>Andante</h3>
+          <p class="desc">Florería de Rosario con pedidos online y entrega a domicilio.</p>
+          <h4 class="role-title">Mi rol</h4>
+          <ul class="roles">
+            <li>Community manager de la marca: manejé sus redes sociales.</li>
+            <li>Produje imágenes y videos en conjunto con la florería.</li>
+            <li>Contenido de producto, promociones y fechas especiales, como el Día de las Flores Amarillas y San Patricio.</li>
+          </ul>
+        </div>
+        <div class="visuals phones">
+          <figure class="phone"><img src="img/floreria-ig.jpg" width="849" height="1500" alt="Grilla de Instagram de Florería Andante con ramos y promociones"></figure>
+          <figure class="phone photo"><img src="img/foto-floreria.jpg" width="1000" height="1244" alt="Ramo de febrero de Florería Andante, sostenido con una mano sobre fondo blanco"></figure>
+        </div>
+        <div class="reels">
+          <p class="eyebrow">En video</p>
+          <div class="reel-row">
+            <figure class="reel">
+              <div class="vframe"><video src="vid/floreria-sanvalentin.mp4" poster="img/poster-floreria-sanvalentin.jpg" controls muted loop playsinline preload="metadata" data-loop aria-label="Reel de San Valentín de Florería Andante, con ramos y globos de corazón"></video></div>
+              <figcaption>Reel · San Valentín</figcaption>
+            </figure>
+            <figure class="reel">
+              <div class="vframe"><video src="vid/floreria-local.mp4" poster="img/poster-floreria-local.jpg" controls muted loop playsinline preload="metadata" data-loop aria-label="Reel en el local de Florería Andante con dos integrantes del equipo"></video></div>
+              <figcaption>Reel · En el local</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="fotografia" class="block">
+    <div class="wrap">
+      <h2 class="big">Fotografía de producto</h2>
+      <p class="lead" style="margin-top:24px">Fotos hechas para tiendas y redes.</p>
+      <div class="shots">
+        <figure>
+          <div class="frame"><img src="img/foto-flowfit.jpg" width="1000" height="1500" style="object-position:50% 36%" alt="Hombre haciendo flexiones sobre la tabla de entrenamiento FlowFit en una plaza"></div>
+          <figcaption>Tabla de flexiones · FlowFit</figcaption>
+        </figure>
+        <figure>
+          <div class="frame"><img src="img/foto-floreria.jpg" width="1000" height="1244" style="object-position:50% 87%" alt="Ramo de febrero de Florería Andante"></div>
+          <figcaption>Ramo de febrero · Florería Andante</figcaption>
+        </figure>
+        <figure>
+          <div class="frame"><img src="img/foto-taller.jpg" width="1000" height="1320" style="object-position:50% 54%" alt="Llaveros rosas y violetas del Día de la Madre sobre fondo rosa"></div>
+          <figcaption>Llaveros Día de la Madre · Taller de Objetos</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="herramientas" class="block">
+    <div class="wrap">
+      <h2 class="big">Herramientas</h2>
+      <div class="tools">
+        <div class="tool-row"><h3>Tienda</h3><ul class="pills"><li class="pill">Shopify</li><li class="pill">WordPress</li></ul></div>
+        <div class="tool-row"><h3>Contenido</h3><ul class="pills"><li class="pill">Canva</li><li class="pill">CapCut</li></ul></div>
+        <div class="tool-row"><h3>Anuncios</h3><ul class="pills"><li class="pill">Meta Ads Manager</li><li class="pill">Meta Business Suite</li><li class="pill">Meta Pixel</li></ul></div>
+        <div class="tool-row"><h3>Inteligencia artificial</h3><ul class="pills"><li class="pill">Claude</li><li class="pill">ChatGPT</li><li class="pill">Gemini</li><li class="pill">Google AI Studio</li></ul></div>
+        <div class="tool-row"><h3>Análisis</h3><ul class="pills"><li class="pill">Google Analytics</li><li class="pill">Search Console</li><li class="pill">Semrush</li><li class="pill">SimilarWeb</li></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2 class="big">Trabajemos juntos.</h2>
+        <p class="lead">Marketing digital y fotografía de producto, para sumar a tu equipo.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Contacto</h3>
+        <dl style="display:flex;flex-direction:column;gap:22px;margin:0">
+          <div><dt>Mail</dt><dd><span class="val" id="v-mail">danyel.benitez.1997@gmail.com</span><button class="copy" type="button" data-copy="v-mail">Copiar</button></dd></div>
+          <div><dt>Teléfono</dt><dd><span class="val" id="v-tel">+54 9 11 6206-6266</span><button class="copy" type="button" data-copy="v-tel">Copiar</button></dd></div>
+          <div><dt>Instagram</dt><dd><a class="val" href="https://www.instagram.com/danielbenitezgon/" style="text-underline-offset:4px">@danielbenitezgon</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="foot">Daniel Benítez · Buenos Aires, Argentina</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = [].slice.call(document.querySelectorAll('video[data-loop]'));
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+      else { v.pause(); }
+    });
+  }, { threshold: 0.5 });
+  vids.forEach(function(v){ io.observe(v); });
+})();
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  btn.addEventListener('click', async function(){
+    var target = document.getElementById(btn.dataset.copy);
+    var text = target.textContent.trim();
+    var ok = false;
+    try { await navigator.clipboard.writeText(text); ok = true; } catch (e) {}
+    if (!ok) {
+      try {
+        var r = document.createRange(); r.selectNodeContents(target);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        ok = document.execCommand('copy');
+      } catch (e) {}
+    }
+    btn.textContent = ok ? 'Copiado' : 'Copialo a mano';
+    setTimeout(function(){ btn.textContent = 'Copiar'; }, 2200);
+  });
+});
+</script>
+
+</body></html>
